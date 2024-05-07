@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col">
+        <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                Nouveau
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                <button ngbDropdownItem [routerLink]="['/ajouter_article']">Ajouter article</button>
+                <button ngbDropdownItem [routerLink]="['/ajouter_categorie']">Ajouter catégorie</button>
+                <button ngbDropdownItem [routerLink]="['/ajouter_sous_categorie']">Ajouter sous catégorie</button>
+            </div>
+        </div>
+    </div>
+</div>

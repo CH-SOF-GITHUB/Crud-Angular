@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center align-items-center mt-4">
+    <form>
+        <h2 class="m-4"><mark>Modifier une catégorie: </mark></h2>
+        <div class="m">
+            <label for="nomcategorie" class="form-label">Nom de categorie: </label>
+            <input type="text" class="form-control" id="nomcategorie" name="nomcategorie"
+                [(ngModel)]="categorie().nomcategorie">
+        </div>
+        <div class="m">
+            <label for="imagecategorie" class="form-label">Image de categorie: </label>
+            <input type="text" class="form-control" id="imagecategorie" name="imagecategorie"
+                [(ngModel)]="categorie().imagecategorie">
+        </div>
+        <div class="m-3">
+            <img src={{categorie().imagecategorie}} alt="logo image" width="200" height="200" />
+        </div>
+        <div class=" ms-5 mt-4">
+            <button type="submit" class="btn btn-primary" (click)="toUpdate()">Submit</button>
+            <button type="submit" class="btn btn-primary ms-4" (click)="annulerSubmit()">Annuler</button>
+        </div>
+    </form>
+</div>
+
+<!-- @if (ajoutReussi == true) {
+<div class="alert alert-success m-5" role="alert">
+    Le produit a été ajouté avec succès!
+</div>
+} -->

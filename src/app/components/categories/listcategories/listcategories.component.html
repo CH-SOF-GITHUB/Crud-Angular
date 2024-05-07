@@ -1,0 +1,27 @@
+<div class="container">
+    <h2 class="m-4">Liste des catégories</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Nom Categorie</th>
+                <th>Image Categorie</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(cat of categtab(); track cat.nomcategorie){
+            <tr>
+                <td class="fw-medium fst-italic">
+                    <p class="mt-5">{{cat.nomcategorie}}</p>
+                </td>
+                <td><img src={{cat.imagecategorie}} alt="image categorie" width="200" height="190" /></td>
+                <td><button class="btn btn-danger mt-5" (click)="deleteCat(cat);"><i
+                            class="fa-solid fa-trash"></i></button>
+                    <button class="btn btn-danger mt-5 ms-3" [routerLink]="['/modifier_categorie/', cat._id]"><i
+                            class="fa-solid fa-pen-nib"></i></button>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
